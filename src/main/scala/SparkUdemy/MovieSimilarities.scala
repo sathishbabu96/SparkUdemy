@@ -22,6 +22,6 @@ object MovieSimilarities extends App {
   val data = sparkContext.textFile("/Users/sathish-6764/Downloads/ml-100k/u.data")
 //  val ratings = data.map(x => x.split("\t"))
 //    .map(x => (x(0).toInt, (x(1).toInt, x(2).toDouble)))
-  data.take(20).foreach(x => println(x))
+  data.take(10).foreach(x => println(x))
 
 }
