@@ -2,8 +2,6 @@ package SparkUdemy
 
 import org.apache.spark.{SparkConf, SparkContext}
 
-import scala.math.max
-
 object AmountByCustomer extends App {
 
   val sparkConf = new SparkConf()
