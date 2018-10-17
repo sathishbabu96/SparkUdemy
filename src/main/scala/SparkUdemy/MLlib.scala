@@ -4,7 +4,7 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.ml.regression.LinearRegression
 import org.apache.spark.ml.linalg.Vectors
 import org.apache.spark.sql.SparkSession
-import scala.math.{sqrt, pow}
+import scala.math.{pow, sqrt}
 
 object MLlib extends App {
 
@@ -20,7 +20,7 @@ object MLlib extends App {
   val file = sparkSession.sparkContext.textFile("/Users/sathish-6764/Downloads/SparkScala/regression.txt")
 
   val data = file.map(x => x.split(","))
-    .map(x => (x(1).toDouble, Vectors.dense(x(0).toDouble)))
+    .map(x => (x(0).toDouble, Vectors.dense(x(1).toDouble)))
 
   val columns = Seq("label", "features")
 
